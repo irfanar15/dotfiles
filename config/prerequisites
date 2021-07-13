@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # initial install
-sudo apt install zsh \
+sudo pacman -S zsh \
     git \
     zip \
     unzip \
@@ -9,6 +9,7 @@ sudo apt install zsh \
     vim \
     neovim \
     tmux \
+    openssh \
 
 # change shell to zsh
 printf "\nChange shell to zsh\n";
@@ -17,7 +18,7 @@ echo
 
 # install antibody 
 curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
-antibody bundle < ~/dotfiles/.zsh_plugins
+antibody bundle < ~/.dotfiles/.zsh_plugins
 
 # install vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
